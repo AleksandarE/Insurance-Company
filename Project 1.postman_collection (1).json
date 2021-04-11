@@ -1,0 +1,609 @@
+{
+	"info": {
+		"_postman_id": "5fd9523f-acc5-4480-9d3b-6b3108fa7b06",
+		"name": "Project 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8888/customer?name=Aleksandar&address=Sofia",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"customer"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Aleksandar"
+						},
+						{
+							"key": "address",
+							"value": "Sofia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/customer/b1b61608-9afc-11eb-9fcb-a87eea8848c4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"customer",
+						"b1b61608-9afc-11eb-9fcb-a87eea8848c4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/customer/b1b61608-9afc-11eb-9fcb-a87eea8848c4/car?model_name=45&number_plate=7&motor_year=56&year=2010",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"customer",
+						"b1b61608-9afc-11eb-9fcb-a87eea8848c4",
+						"car"
+					],
+					"query": [
+						{
+							"key": "model_name",
+							"value": "45"
+						},
+						{
+							"key": "number_plate",
+							"value": "7"
+						},
+						{
+							"key": "motor_year",
+							"value": "56"
+						},
+						{
+							"key": "year",
+							"value": "2010"
+						},
+						{
+							"key": "customer_id",
+							"value": "77263852-954b-11eb-9982-a87eea8848c0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/customer?customer_id=7daeb824-992b-11eb-9369-a87eea8848c4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"customer"
+					],
+					"query": [
+						{
+							"key": "customer_id",
+							"value": "7daeb824-992b-11eb-9369-a87eea8848c4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer lists /return customers/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/agent?name=Petko&address=Plovdiv",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"agent"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Petko"
+						},
+						{
+							"key": "address",
+							"value": "Plovdiv"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get agent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/agent/?agent_id=fdd4adc0-992c-11eb-8a14-a87eea8848c4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"agent",
+						""
+					],
+					"query": [
+						{
+							"key": "agent_id",
+							"value": "fdd4adc0-992c-11eb-8a14-a87eea8848c4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign a customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/agent/:fdd4adc0-992c-11eb-8a14-a87eea8848c4/:7daeb824-992b-11eb-9369-a87eea8848c4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"agent",
+						":fdd4adc0-992c-11eb-8a14-a87eea8848c4",
+						":7daeb824-992b-11eb-9369-a87eea8848c4"
+					],
+					"variable": [
+						{
+							"key": "fdd4adc0-992c-11eb-8a14-a87eea8848c4",
+							"value": ""
+						},
+						{
+							"key": "7daeb824-992b-11eb-9369-a87eea8848c4",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete agent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/agent/:?agent_id=fdd4adc0-992c-11eb-8a14-a87eea8848c4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"agent",
+						":"
+					],
+					"query": [
+						{
+							"key": "agent_id",
+							"value": "fdd4adc0-992c-11eb-8a14-a87eea8848c4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agent list /return agents/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/agents",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"agents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add insurance claim",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/claims/?customer_id=7daeb824-992b-11eb-9369-a87eea8848c4/file&date=12.02.2012&incident_description=test&claim_amount=50000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"claims",
+						""
+					],
+					"query": [
+						{
+							"key": "customer_id",
+							"value": "7daeb824-992b-11eb-9369-a87eea8848c4/file"
+						},
+						{
+							"key": "date",
+							"value": "12.02.2012"
+						},
+						{
+							"key": "incident_description",
+							"value": "test"
+						},
+						{
+							"key": "claim_amount",
+							"value": "50000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return claim details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/claims/?claim_id=12345",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"claims",
+						""
+					],
+					"query": [
+						{
+							"key": "claim_id",
+							"value": "12345"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/claims/?claim_id=12345/status/&value=46000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"claims",
+						""
+					],
+					"query": [
+						{
+							"key": "claim_id",
+							"value": "12345/status/"
+						},
+						{
+							"key": "value",
+							"value": "46000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of claims",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/claims",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"claims"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/payment/in/?date=15.07.2020&customer_id=12345&amount_received=4000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"payment",
+						"in",
+						""
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "15.07.2020"
+						},
+						{
+							"key": "customer_id",
+							"value": "12345"
+						},
+						{
+							"key": "amount_received",
+							"value": "4000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/payment/out/?date=16.07.2016&agent_id=12345&amount_sent=5000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"payment",
+						"out",
+						""
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "16.07.2016"
+						},
+						{
+							"key": "agent_id",
+							"value": "12345"
+						},
+						{
+							"key": "amount_sent",
+							"value": "5000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of payments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/payments/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"payments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return a list of all claims by agent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/stats/claims",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"stats",
+						"claims"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return a list of all revenues by agents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/payments/revenues",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"payments",
+						"revenues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agents performance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8888/stats/agents",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8888",
+					"path": [
+						"stats",
+						"agents"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
